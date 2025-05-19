@@ -1,0 +1,66 @@
+/* General Body Styling */
+body {
+  background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'); /* Soft textile pattern */
+  background-color: #fffaf0; /* Light warm ivory background */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Customize scrollbars for better UX */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fffaf0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f472b6;
+  border-radius: 4px;
+}
+
+/* Optional: Add transition to hover effects */
+a,
+button {
+  transition: all 0.3s ease;
+}
+
+/* For images inside product cards */
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Optional: Responsive tweaks if needed */
+@media (max-width: 640px) {
+  h2 {
+    font-size: 1.75rem;
+  }
+  .text-lg {
+    font-size: 1rem;
+  }
+}
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #fbeaea;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #7c2d12;
+  transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: #d97706;
+}

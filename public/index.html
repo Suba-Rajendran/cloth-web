@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paavai Vastra - Ethnic Elegance</title>
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="font-sans text-gray-800">
+  <!-- Navbar -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-serif text-pink-700">Paavai Vastra</h1>
+      <nav class="space-x-6 text-sm uppercase">
+        <a href="#home" class="hover:text-pink-600">Home</a>
+        <a href="#shop" class="hover:text-pink-600">Shop</a>
+        <a href="#about" class="hover:text-pink-600">About</a>
+        <a href="#contact" class="hover:text-pink-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="bg-pink-100 py-20 text-center">
+    <h2 class="text-4xl md:text-5xl font-serif text-pink-800 mb-4">Grace in Every Thread</h2>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
+      Discover timeless beauty in our handcrafted dress materials and elegant kurtas.
+    </p>
+    <a href="#shop" class="bg-pink-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-pink-700 transition">
+      Shop Now
+    </a>
+  </section>
+
+  <section id="shop" class="py-16 bg-white">
+    <nav>
+  <ul class="navbar">
+    <li><a href="index.html">🏠 Home</a></li>
+    <li><a href="products.html">🛍️ Shop</a></li>
+    <li><a href="cart.html">🛒 Cart</a></li>
+  </ul>
+</nav>
+
+  <div class="max-w-6xl mx-auto px-4">
+    <h3 class="text-3xl font-serif text-center text-pink-700 mb-10">Featured Collections</h3>
+    <div id="product-grid" class="grid md:grid-cols-3 gap-10">
+        <!-- Product 1 -->
+        <div class="bg-pink-50 rounded-2xl shadow-md overflow-hidden">
+          <img src="https://via.placeholder.com/400x300" alt="Kurta 1" class="w-full">
+          <div class="p-4">
+            <h4 class="text-lg font-semibold">Elegant Cotton Kurta</h4>
+            <p class="text-sm text-gray-600">Soft breathable fabric with subtle embroidery</p>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="bg-pink-50 rounded-2xl shadow-md overflow-hidden">
+          <img src="https://via.placeholder.com/400x300" alt="Dress Material 1" class="w-full">
+          <div class="p-4">
+            <h4 class="text-lg font-semibold">Silk Blend Dress Material</h4>
+            <p class="text-sm text-gray-600">Luxurious texture with traditional prints</p>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="bg-pink-50 rounded-2xl shadow-md overflow-hidden">
+          <img src="https://via.placeholder.com/400x300" alt="Kurta 2" class="w-full">
+          <div class="p-4">
+            <h4 class="text-lg font-semibold">Festive Kurta Set</h4>
+            <p class="text-sm text-gray-600">Vibrant colors perfect for celebrations</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="bg-pink-100 py-16 text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h3 class="text-3xl font-serif text-pink-800 mb-4">Our Story</h3>
+      <p class="text-gray-700 text-lg">
+        At Paavai Vastra, we blend heritage with style. Every fabric we offer is handpicked to reflect the richness of
+        Indian tradition and the elegance of modern design. Started by two passionate creators, our boutique celebrates
+        femininity, comfort, and grace.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-white py-16">
+    <div class="max-w-2xl mx-auto px-4">
+      <h3 class="text-3xl font-serif text-center text-pink-700 mb-6">Contact Us</h3>
+      <form class="space-y-4">
+        <input type="text" placeholder="Name" class="w-full px-4 py-2 border border-gray-300 rounded-md">
+        <input type="email" placeholder="Email" class="w-full px-4 py-2 border border-gray-300 rounded-md">
+        <textarea placeholder="Your Message" rows="4"
+          class="w-full px-4 py-2 border border-gray-300 rounded-md"></textarea>
+        <button type="submit"
+          class="bg-pink-600 text-white px-6 py-2 rounded-md hover:bg-pink-700">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-pink-700 text-white text-center py-4">
+    <p>&copy; 2025 Paavai Vastra. All rights reserved.</p>
+  </footer>
+
+  <!-- JS File -->
+  <script src="script.js"></script>
+</body>
+
+</html>

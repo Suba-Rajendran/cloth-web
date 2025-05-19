@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paavai Vastra - Collection</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="shop-body">
+  <!-- Navigation Bar -->
+  <nav>
+    <ul class="navbar">
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="products.html" class="active">🛍️ Shop</a></li>
+      <li><a href="cart.html">🛒 Cart</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="shop-header">
+    <h1>Paavai Vastra</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Collection</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Product Section -->
+  <section class="shop-section">
+    <h2 class="shop-title">Our Exclusive Collection</h2>
+    <div id="product-list" class="product-grid">
+      <!-- Dynamic products will load here -->
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    // Load products from backend
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch('/api/products')
+        .then(response => response.json())
+        .then(products => {
+          const productList = document.getElementById('product-list');
+          productList.innerHTML = ''; // Clear default content
+
+          products.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.className = 'product-card';
+            productCard.innerHTML = `
+              <img src="${product.image}" alt="${product.name}" />
+              <h3>${product.name}</h3>
+              <p class="price">₹${product.price}</p>
+              <button onclick="addToCart('${product.name}', ${product.price}, '${product.image}')">Add to Cart</button>
+            `;
+            productList.appendChild(productCard);
+          });
+        })
+        .catch(err => {
+          console.error('Failed to load products:', err);
+        });
+    });
+
+    // Add to cart function
+    function addToCart(name, price, image) {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push({ name, price, image });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`${name} added to cart!`);
+    }
+    fetch('/api/products')
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById('product-list');
+    container.innerHTML = '';
+    data.forEach(product => {
+      container.innerHTML += `
+        <div class="product-card">
+          <img src="${product.image}" alt="${product.name}" />
+          <h3>${product.name}</h3>
+          <p class="price">₹${product.price}</p>
+          <button onclick="addToCart('${product.name}', ${product.price}, '${product.image}')">Add to Cart</button>
+        </div>
+      `;
+    });
+  });
+
+  </script>
+</body>
+</html>
