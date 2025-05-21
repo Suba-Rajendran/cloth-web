@@ -1,5 +1,5 @@
 // script.js
-
+require('dotenv').config();
 async function loadProducts() {
   try {
     const response = await fetch('/api/products');
